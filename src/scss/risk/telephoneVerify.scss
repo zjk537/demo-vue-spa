@@ -1,0 +1,314 @@
+/* wo ye zao kan zhege dai ma bushunyanle*/
+.telephoneVerify{
+.code{
+  background:none;
+}
+.submit button{
+  font-size: 1rem;
+}
+.forget a{
+  font-size: 0.6rem;
+}
+$normalBlue:#3d3dcb;
+$normalGrey:#d5d5d5;
+$fontBlack:#555555;
+$fontGrey:#999999;
+$lineGrey:#ebebeb;
+$btnGrey:#888888;
+$normalYellow:#ffa11b;
+$placeholder:#cecece;
+$verticalLine:#e3e3e3;
+/* @import "../base"; */
+@import '../rem';
+button{
+  border:none;
+}
+input,button{border:none;}
+html,body{
+  overflow: hidden;
+}
+.img-container{
+  display: none;
+}
+.telephone-verify-container{
+  @include Rem(margin-top,20);
+  .info{
+    text-align: center;
+    background: #fff;
+    @include Rem(padding-bottom,30);
+    .key{
+      @include Rem(font-size,28);
+      color:$fontGrey;
+      @include Rem(padding-top,30);
+      @include Rem(padding-bottom,30);
+    }
+    .value{
+      color:#555555;
+      @include Rem(padding-bottom,30);
+      @include Rem(font-size,36);
+    }
+  }
+  .item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    @include Rem(padding,30);
+    border: 1px solid #eeeeee;
+    .inner{
+      position: relative;
+      width:100%;
+      .key{
+        display: block;
+        @include Rem(font-size,28);
+        color:$fontGrey;
+        width: 4rem;
+      }
+      input{
+        @include Rem(font-size,28);
+        position: absolute;
+        display: block;
+        left:4.5rem;
+        top:0;
+      }
+    }
+  }
+  #imgcode1{
+    border-top:none;
+    position: relative;
+    .left{
+      @include Rem(width,450);
+    }
+    .right{
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right:0;
+      text-align: right;
+      width:7rem;
+      img{
+        display: inherit;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        width: 10rem;
+      }
+    }
+  }
+  .forget{
+    position: relative;
+    @include Rem(height,100);
+    @include Rem(line-height,100);
+    text-align: right;
+    @include Rem(padding-right,30);
+    a{
+      color:$normalBlue;
+    }
+    a:active{
+      color:$fontGrey;
+    }
+  }
+  .submit{
+    @include Rem(margin-top,30);
+    text-align: center;
+    button{
+      @include Rem(padding-top,20);
+      @include Rem(padding-bottom,20);
+      @include Rem(width,690);
+      background: #ffa11b;
+      color:#fff;
+      border-radius: 3px;
+    }
+  }
+}
+.sms-container{
+  @include Rem(margin-top,20);
+  .item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    @include Rem(padding,30);
+    .inner{
+      position: relative;
+      input{
+        @include Rem(font-size,28);
+      }
+      .vertical-line{
+        @include Rem(margin-right,10);
+        color:$verticalLine;
+      }
+      button{
+        border: none;
+        color:$normalBlue;
+        @include Rem(font-size,28);
+      }
+    }
+    .left{
+      @include Rem(width,450);
+    }
+    .right{
+      text-align: right;
+      position: absolute;
+      right: 1rem;
+      width:6rem;
+    }
+  }
+  .submit{
+    @include Rem(margin-top,70);
+    text-align: center;
+    button{
+      @include Rem(padding-top,20);
+      @include Rem(padding-bottom,20);
+      @include Rem(width,690);
+      background: #ffa11b;
+      color:#fff;
+      border-radius: 3px;
+    }
+  }
+}
+.no-sms-image-code-container{
+  @include Rem(margin-top,20);
+  .item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    @include Rem(height,90);
+    .inner{
+      input{
+        @include Rem(font-size,28);
+      }
+      .vertical-line{
+        @include Rem(margin-right,10);
+        color:$verticalLine;
+      }
+      button{
+        border: none;
+        color:$normalBlue;
+        @include Rem(font-size,28);
+      }
+    }
+    .left{
+      @include Rem(padding-left,30);
+      width: 70%;
+    }
+    .right{
+      text-align: center;
+      height: 100%;
+      width: 30%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .submit{
+    @include Rem(margin-top,70);
+    text-align: center;
+    button{
+      @include Rem(padding-top,20);
+      @include Rem(padding-bottom,20);
+      @include Rem(width,690);
+      background: #ffa11b;
+      color:#fff;
+      border-radius: 3px;
+    }
+  }
+}
+.image-code-container{
+  @include Rem(margin-top,20);
+  .item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    @include Rem(height,90);
+    .inner{
+      input{
+        @include Rem(font-size,28);
+      }
+      .vertical-line{
+        @include Rem(margin-right,10);
+        color:$verticalLine;
+      }
+      button{
+        border: none;
+        color:$normalBlue;
+        @include Rem(font-size,28);
+      }
+    }
+    .left{
+      @include Rem(padding-left,30);
+      //@include Rem(width,490);
+      width: 70%;
+    }
+    .right{
+      text-align: center;
+      height: 100%;
+      width: 30%;
+      //@include Rem(width,200);
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .submit{
+    @include Rem(margin-top,70);
+    text-align: center;
+    button{
+      @include Rem(padding-top,20);
+      @include Rem(padding-bottom,20);
+      @include Rem(width,690);
+      background: #ffa11b;
+      color:#fff;
+      border-radius: 3px;
+    }
+  }
+}
+.process{
+  background: rgba(0,0,0,.6);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 990;
+  .process-container{
+    @include Rem(width,520);
+    @include Rem(height,520);
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+    left: 15%;
+    background: #fff;
+    text-align: center;
+    @include Rem(padding-top,100);
+    border-radius: 3px;
+    #canvas{
+      width: 140px !important;
+      height: 140px !important;
+    }
+    .text{
+      @include Rem(font-size,34);
+      @include Rem(height,180);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      width: 80%;
+      text-align: center;
+      span{
+        word-wrap:break-word;
+        word-break:break-all;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.hide-content{
+  display: none!important;
+}
+.summaryTip{
+    width: 23rem;
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    color: #999;
+    font-size:0.8rem;
+}  
+}

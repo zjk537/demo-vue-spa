@@ -1,0 +1,89 @@
+@import "../base";
+@import '../rem';
+$borderBottom:1px #e2e6e9 solid;
+
+.head{
+  padding-top:2.5rem;
+  background:#fff;
+  border-bottom:$borderBottom;
+}
+.step{
+  width:80.5%;
+  padding-top: 1.6rem;
+  margin:0 auto;
+}
+.lineBox{
+  position: relative;
+  top:3px;
+  p{
+    width: 100%;
+    top:0;
+    left:0;
+  }
+}
+.lineBg{
+  height:2px;
+  background:#d5d5d5;
+}
+.line{
+  position:absolute;
+  height:2px;
+  background:#3d3dcb;
+  z-index: 2;
+}
+.stepDot{
+  position:relative;
+  display: flex;
+  display:-webkit-flex; 
+  margin-top: -0.6rem;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  z-index: 3;
+}
+
+.stepDot i{
+  // display:block;
+  width:1.4rem;
+  height:1.4rem;
+  line-height: 1.4rem;
+  margin-top: -4px;
+  color:#fff;
+  background: #d5d5d5;
+  border:5px solid #fff;
+  border-radius:50%;
+  text-align: center;
+  // font-style:normal;
+  @include Rem(font-size,22);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+.stepDot i.active{
+  background:#3d3dcb;
+}
+.stepSummary{
+  display: flex;
+  display:-webkit-flex; 
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  width: 91%;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  padding-bottom:1rem;
+  span{
+    position: relative;
+    display: block;
+    @include Rem(font-size,26);
+    color:#555555;
+    left:0.2rem;
+    white-space: nowrap;
+  }
+  span:last-child{
+    position: relative;
+    left:-0.1rem;
+  }
+  span:first-child{
+    position: relative;
+    left:0.2rem;
+  }
+}

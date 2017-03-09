@@ -1,0 +1,75 @@
+@import "../base";
+.register{
+	height:100%;
+	.header{
+		background: transparent;
+		.iconfont{
+			color: $blue;
+		}
+	}
+	.form{
+		height: 20rem;
+		padding: 0 1rem;
+		margin-top: -2rem;
+		background:#fec100;
+		li{
+			margin-bottom: .5rem;
+			position: relative;
+			font-size: 1rem;
+			input{
+				line-height: 2rem;
+				padding:.6rem 1rem;
+				border:none;
+				flex: 1;
+				border-radius:.5rem;
+				width: 85%;
+			}
+			.icon-clear{
+				background:url(/static/img/ic_clear.png) no-repeat center;
+				background-size:1.3rem;
+				position:absolute;
+				right: 0;
+				top:0;
+				padding:1rem;
+				width: 1rem;
+				height: 1rem;
+			}
+			span.btn{
+				width: 5rem;
+				margin-left: .5rem;
+				background: #d1472f;
+			}
+			.btn{
+				padding:.6rem .5rem;
+				line-height: 2rem;
+				white-space: nowrap;
+				text-align: center;
+				background: #c82003;
+				color: #fff;
+				border-radius:.5rem;
+			}
+			.btn.disabled{
+				background: #b9b9b9;
+			}
+		}
+		.btnbar{
+			padding-top:1.5rem;
+			text-align: center;
+			position: relative;
+			a{
+				color: #c82003;
+				margin-top: .8rem;
+				font-size: .8rem;
+				display: inline-block
+			}
+			.msg{
+				display: none;
+				color: #c82003;
+				font-size: .8rem;
+				position: absolute;
+				margin-top: -1.5rem;
+				width:100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+@charset "utf-8";
+$borderColor:#e6e6e6;
+$blue:#3d3dcb;
+$yellow:#ffa11b;
+
+::placeholder{color:#dbdbdb;}
+::-webkit-input-placeholder  {color:#dbdbdb;}
+:-moz-placeholder {color:#dbdbdb;}
+::-moz-placeholder {color:#dbdbdb;}
+:-ms-input-placeholder {color:#dbdbdb;}
+
+
+.coin:before{
+	content: "￥";
+    margin-left: -.2rem;
+}
+h3.coin:before{
+	font-size:1.5rem;
+}
+.btn{
+	padding:.5rem 0;
+	background:$yellow;
+	border:1px solid $yellow;
+	font-size: 1rem;
+	color: #fff;
+	text-align: center;
+	line-height:1.5rem;
+	border-radius:3px;
+}
+.btn.disabled{
+	background:#ccc;
+	border-color:#ccc;
+}
+
+.flex{
+	display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+}
+
+.mint-msgbox-confirm{
+    color: $blue;
+}
+.mint-msgbox{
+    border-radius:6px;
+    width: 70%;
+    .mint-msgbox-header {
+        padding: 20px 0 0;
+        .mint-msgbox-title{
+            font-size:1.1rem;
+            font-weight:normal;
+            color:#333;
+        }
+    }
+    .mint-msgbox-content {
+        padding:15px 0;
+        display: table;
+        width: 100%;
+        min-height: 2.8rem;
+        .mint-msgbox-message{
+            padding:0 20px;
+            display: table-cell;
+            vertical-align: middle;
+            font-size:0.9rem;
+            line-height: 1.4rem;
+            color:#999;
+            .left{
+                text-align: left;
+            }
+        }
+    }
+    .mint-msgbox-btns button{
+        padding:5px 0;
+        color:$blue;
+        font-size:1.1rem;
+    }
+}
+
+.mint-toast{
+    background:rgba(0,0,0,.6);
+}
+

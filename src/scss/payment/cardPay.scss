@@ -1,0 +1,100 @@
+@import "../base";
+.card_pay{
+	padding-top:2.5rem;
+	font-size: .9rem;
+	.content{
+		padding-bottom:2rem;
+		color:#999;
+		.amount{
+			padding: 2rem 0;
+			border-bottom:1px solid $borderColor;
+			background:#fff;
+			h3{
+				font-size: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				color: $blue;
+			}
+			p{
+				text-align: center;
+			}
+		}
+		.detail{
+			padding:1rem 0 .5rem 1rem;;
+			background:#fff;
+			ul li{
+				line-height: 1.5rem;
+				padding:.2rem 0;
+				display: flex;
+				.column{
+					width: 50%;
+					float: left;
+					font-size: .9rem
+				}
+				label{
+					display: inline-block;
+					min-width: 5rem;
+					text-align:justify;
+					text-justify:inter-ideograph;
+				}
+			}
+		}
+		.split{
+			height: 1.5rem;
+			background:url(/static/img/split_line.png) no-repeat top;
+			background-size:contain;
+		}
+		.group{
+			p{
+				line-height: 1.5rem;
+				padding:0 1rem;
+				font-size: .9rem;
+				padding-bottom:.5rem;
+				em{
+					color: #333;
+				}
+			}
+			.item{
+				border-bottom:1px solid $borderColor;
+				border-top:1px solid $borderColor;
+				padding:.5rem 1rem;
+				background:#fff;
+				position: relative;
+				input{
+					padding:.5rem 0;
+					border:none;
+					line-height: 1.5rem;
+					font-size: 1rem;
+					flex: 1;
+				}
+				span{
+					position: absolute;
+					width: 5.1rem;
+					padding:.5rem 0;
+					display: inline-block;
+					line-height: 1.5rem;
+					white-space: nowrap;
+					text-align: right;
+					font-size: .9rem;
+					color: $blue;
+					position: absolute;
+					right: 1rem;
+				}
+				span.disabled{
+					color: #999;
+					text-align: center;
+				}
+				span:before{
+					content: " | ";
+					color: #e6e6e6;
+					position: absolute;
+					left: -.4rem;
+				}
+			}
+		}
+	}
+
+	.btn{
+		margin:1rem;
+	}
+}

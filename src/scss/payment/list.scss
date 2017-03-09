@@ -1,0 +1,39 @@
+@import "../base";
+.pay_list{
+	padding-top:2.5rem;
+	color: #999;
+	font-size:.9rem;
+	.group{
+		background:#fff;
+		border-bottom:1px solid $borderColor;
+		padding-left:1rem;
+		ul li{
+			border-bottom:1px solid $borderColor;
+			padding:1rem 0;
+			position:relative;
+			.coin,.princ{
+				width: 70%;
+				line-height: 1.5rem;
+			}
+			.coin{
+				color: #555;
+			}
+			.date{
+				position:absolute;
+				line-height: 1.5rem;
+				right: 1rem;
+				top: 50%;
+				margin-top: -.75rem;
+				text-align: right;
+				.iconfont{
+					font-size: .9rem;
+				}
+			}
+		}
+		ul li:last-child{
+			border-bottom:1px solid transparent;
+		}
+	}
+
+	
+}

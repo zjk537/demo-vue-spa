@@ -1,0 +1,44 @@
+@import "../base";
+.list{
+	padding-top:3.2rem;
+	.group{
+		.item{
+			border-bottom:1px solid $borderColor;
+			background: #fff;
+			margin-bottom: .7rem;
+			padding:1rem 5%;
+			position:relative;
+			color: #999;
+			font-size: .9rem;
+			ul{
+				width: 80%;
+				li{
+					line-height: 2rem;
+					label{
+						width: 7rem;
+						display: inline-block;
+
+					}
+					.amount:before{
+						content: "￥";
+					}
+				}
+			}
+			a{
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				color: #3d3dcb;
+				margin-top: -1rem;
+				width: 20%;
+				line-height: 2rem;
+				padding-right:5%;
+				text-align: right;
+			}
+			.iconfont{
+				font-size: .8rem;
+			}
+		}
+	}
+}

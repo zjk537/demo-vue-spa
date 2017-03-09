@@ -1,0 +1,45 @@
+<template>
+	<div class="container register">
+		<comHeader title="手机快速注册" back="true"></comHeader>
+		<div class="row">
+			<input type="tel" name="uname" placeholder="手机号码">
+			<em class="icon-clear"></em>
+		</div>
+		<div class="row">
+			<input type="password" name="upwd" placeholder="登录密码">
+			<em class="icon-clear"></em>
+		</div>
+		<div class="row">
+			<button>下一步</button>
+		</div>
+		<div class="row">
+			注册代表你已阅读并同意<a href="/contract/register">相关协议</a>
+		</div>
+	</div>
+</template>
+<script>
+import comHeader from 'components/header.vue';
+export default {
+    name: 'register',
+    props: [],
+    data() {
+        return {
+            msg:""
+        }
+    },
+    components: {
+        comHeader
+    },
+    mounted: function() {
+
+    },
+    methods: {
+
+    }
+}
+</script>
+
+<style lang="scss">
+@import "./src/scss/auth/style";
+.register{padding-top: 5rem;}
+</style>

@@ -1,0 +1,110 @@
+@import "../base";
+.confirm{
+	padding-top:2.5rem;
+	color:#999;
+	font-size:.9rem;
+	.row{
+		padding:1rem;
+		background:#fff;
+		border-bottom:1px solid $borderColor;
+		margin-bottom:.8rem;
+		white-space: nowrap;
+		label{
+			width: 6rem;
+			display: inline-block;
+			white-space: nowrap;
+		}
+
+		li{
+			line-height: 1.5rem;
+		}
+	}
+	.label{
+		font-size: .8rem;
+		line-height: 1rem;
+		padding-left:1rem;
+		margin-bottom:.7rem;
+		margin-top: -.2rem;
+		white-space: nowrap;
+		a{
+			color: $blue;
+		}
+	}
+	.detail{
+		li{
+			line-height: 1.5rem;
+			padding:.2rem 0;
+			span{
+				color: #555;
+			}
+		}
+	}
+	.coupon{
+		span{
+			position: absolute;
+			right: 1rem;
+		}
+		span.enabled{
+			color: #f75258;
+			.iconfont{
+				color: #999;
+			}
+		}
+		.iconfont{
+			margin-left: .2rem;
+			font-size: .8rem;
+		}
+	}
+	.form{
+		background:#fff;
+		border-bottom:1px solid $borderColor;
+		padding-left:1rem;
+		margin-bottom:.8rem;
+		label{
+			min-width: 6rem;
+			display: inline-block;
+			padding:.5rem 0;
+			white-space: nowrap;
+		}
+		input{
+			border:none;
+			padding:.5rem 0;
+			flex: 1;
+		}
+		input[disabled]{
+			background:transparent;
+		}
+		span{
+			width: 5.5rem;
+			padding:.5rem 0;
+			display: inline-block;
+			line-height: 1.5rem;
+			white-space: nowrap;
+			text-align: right;
+			font-size: .9rem;
+			color: $blue;
+			position: relative;
+		}
+		span.disabled{
+			color: #999;
+			text-align: center;
+		}
+		span:before{
+			content: " | ";
+			color: #e6e6e6;
+			position: absolute;
+			left: -.3rem;
+		}
+		li{
+			border-bottom:1px solid $borderColor;
+			padding:.5rem 1rem .5rem 0;
+			position: relative;
+		}
+		li:last-child{
+			border:none;
+		}
+	}
+	.btn{
+		margin: 2rem 1rem;
+	}
+}

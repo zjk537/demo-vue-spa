@@ -1,0 +1,73 @@
+@import "../base";
+.login{
+	height:100%;
+	width: 100%;
+	background:#fff;
+	position: absolute;
+	.header{background: transparent;}
+	.iconfont{color:#3d3dcb;}
+	.content{
+		position: absolute;
+		top:50%;
+		height: 19rem;
+		margin-top: -10rem;
+		.iconfont{font-size: 1.3rem;}
+		img{width: 80%;margin:0 auto;margin-bottom: 2rem;}
+		.row{
+			width: 85%;
+			margin: 0 auto;
+			margin-bottom: 1rem;
+			position:relative;
+			color: rgba(255,255,255,0.6);
+			text-align: center;
+			letter-spacing:1px;
+			line-height: 1.5rem;
+			a{color:#fff;display:inline-block;}
+			input{
+				border: none;
+				background: #ededed;
+				width: 85%;
+				border-radius: 3px;
+				padding: .5rem 10% .5rem 5%;
+				line-height: 2rem;
+				letter-spacing:1px;
+				color: #555;
+				font-size: .8rem;
+			}
+			.icon-clear{
+				background:url(/static/img/ic_clear.png) no-repeat center;
+				background-size:1.3rem;
+				position:absolute;
+				right: 0;
+				top:0;
+				padding:1rem;
+				width: 1rem;
+				height: 1rem;
+			}
+			.findpwd{
+				color:#3d3dcb;
+				font-size: .8rem;
+				padding: 1rem .5rem;
+				display: inline-block;
+			}
+		}
+	}
+	
+	.footer{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		width: 100%;
+		background: rgba(255,161,27,.15);
+		border-top: 1px solid rgba(255,161,27,.5);
+		.btn{
+			background:none;
+			border:transparent;
+			color: #fec100;
+			font-size: .9rem;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

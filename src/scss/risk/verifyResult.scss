@@ -1,0 +1,54 @@
+/*created by w at 20161223*/
+@import "../base";
+@import '../rem';
+$border:1px #e2e6e9 solid;
+.verifyResult{
+  background:#fff;
+}
+img{
+  width:100%;
+}
+hr{
+  height:2.4rem;
+}
+.result p{
+  @include Rem(font-size,48);
+  padding:2.5rem 0;
+  border-bottom:$border;
+  text-align: center;
+  width: 100%; 
+}
+.result p.fail{
+  color:#ff4e4e;
+}
+.result p.success{
+  color:#ffa11b;
+}
+.result div{
+  background:#f0f3f5;
+  padding-bottom:0.8rem;
+}
+.result h4{
+  padding: 0.7rem 1rem 0.8rem 1rem;
+  font-size: 0.86667rem;
+  color: #333;
+  background: url(/static/img/bankCardMesBg.png) #fff no-repeat;
+  background-size: 100%;
+  background-position-y: 100%;
+  font-weight: normal;
+  strong{
+    font-size: normal;
+    font-weight: normal;
+    display: inline-block;
+    width: 90%;
+    vertical-align: middle;
+  }
+  img{
+    display: inline-block;
+    width: 1.56667rem;
+    height: 1.56667rem;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 5px;
+  }
+}

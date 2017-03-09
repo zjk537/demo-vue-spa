@@ -1,0 +1,101 @@
+@import "../base";
+.loan_result{
+	padding-top:2.5rem;
+	color: #999;
+	font-size: 1rem;
+	.steps{
+		background: #fff;
+		border-bottom: 1px solid $borderColor;
+		padding-left:3rem;
+		padding-right:1rem;
+		.step{
+			padding:1.5rem 0 1.5rem .5rem;
+			position:relative;
+			.line{
+				width: 2px;
+				background:#e6e6e6;
+				position: absolute;
+				left: -1.25rem;
+				margin-left: -1px;
+				z-index: 1;
+			}
+			.box{
+				position: absolute;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-repeat:no-repeat;
+				background-size:contain;
+				border-radius:.75rem;
+				left: -2rem;
+				z-index: 2;
+			}
+			.desc{
+				font-size: .8rem;
+				line-height: 1rem;
+				color: #999;
+				span{
+					color: $blue;
+				}
+			}
+		}
+		.step.enabled{
+			color: $blue;
+			.line{
+				background:$blue;
+			}
+			.box{
+				background-image:url(/static/img/ic_coin.png);
+			}
+		}
+		.step1{
+			border-bottom:1px solid $borderColor;
+			.line{
+				height: 2.5rem;
+				bottom:-1px
+			}
+			.box{
+				background-image:url(/static/img/ic_coin.png);
+			}
+		}
+		.step2{
+			.line{
+				height: 3rem;
+				top: 0;
+			}
+			.box{
+				background-image:url(/static/img/ic_success_gray.png);
+			}
+		}
+		.step2.enabled{
+			.desc{display:none;}
+			.box{
+				background-image:url(/static/img/ic_success.png);
+			}
+		}
+	}
+
+	.amount{
+		margin-top: 1rem;
+		padding:1rem;
+		background:#fff;
+		border-bottom:1px solid $borderColor;
+		label{
+			font-size: .9rem;
+		}
+		h3{
+			font-size: 3rem;
+			color: $blue;
+		}
+	}
+
+	.btnbar{
+		padding:2rem 1rem;
+		text-align: center;
+		.btn{
+			background:transparent;
+			color: $yellow;
+			display: inline-block;
+			min-width: 6rem;
+		}
+	}
+}

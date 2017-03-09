@@ -1,0 +1,207 @@
+/*created by w at 20161223*/
+@import "../base";
+@import '../rem';
+.verifyItem{
+  padding-top:2.4rem;
+  p{
+    padding:0 0.8rem;
+    color:#999;
+    @include Rem(font-size,22);
+    @include Rem(height,65);
+    @include Rem(line-height,65);
+
+  }
+  .itemBox{
+    display: flex;
+    display: -webkit-flex;
+    padding:0 0.8rem;
+    text-align: right;
+    section{
+      flex: 4;
+      -webkit-flex: 4;
+      margin-left: 1rem;
+      overflow: hidden;
+    }
+  }
+  .stepLine{
+    display: flex;
+    display: -webkit-flex;
+    margin:1.5rem 0; 
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+  .stepLine i{
+    display: block;
+    width: 1px;
+    height: 2rem;
+    padding: 0.5rem 0px;
+    background:#cccccc;
+  }
+  .stepLine span.containue{
+    display:block;
+    width:0.7rem;
+    height:0.7rem;
+    margin-left: -0.5rem;
+    background:#3d3dcb;
+    border-radius:50%;
+    border:3px solid #9698e0;
+  }
+  .stepLine span.verified{
+    display:block;
+    width:0.5rem;
+    height:0.5rem;
+    margin-left: -0.3rem;
+    background:#f0f3f5;
+    border-radius:50%;
+    border:2px solid #ccc;
+  }
+  .stepLine span.noVerify{
+    display:block;
+    width:0.7rem;
+    height:0.7rem;
+    margin-left: -0.3rem;
+    background:#cccccc;
+    border-radius:50%;
+  }
+  .item{
+    position:relative;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    @include Rem(height,120);
+    @include Rem(line-height,120);
+    margin-bottom:0.8rem;
+    background: #fff;
+    border-radius:5px;
+    border:1px solid #d5d5d5;
+    background-repeat:no-repeat;
+    background-position:90% .8rem;
+    background-size:4rem;
+    i{
+      position:absolute;
+      display: block;
+      width:0.7rem;
+      height: 0.7rem;
+      margin-top: -0.3rem;
+      border-radius:50%;
+      border:1px solid #d5d5d5;
+      left:-0.3rem;
+      top:50%;
+      background:#f0f3f5;
+      z-index: 1;
+    }
+    p{
+      position:relative;
+      width: 100%;
+      @include Rem(font-size,28);
+      white-space: nowrap;
+      text-align: left;
+      text-indent: 0.6rem;
+    }
+    strong{
+      position:absolute;
+      display: inline-block;
+      right: 1.5rem;
+      top:0;
+      font-weight:normal;
+      @include Rem(font-size,26);
+    }
+
+    strong:before{
+      @include trangle;
+      display: none;
+      border-left:8px solid #3d3dcb;
+      right:-0.9rem;
+      top: 0.6rem;
+    }
+    strong:after{
+      @include trangle;
+      display: none;
+      border-left:8px solid #fff;
+      right:-0.8rem;
+      top: 0.6rem;
+    }
+    
+  }
+
+  .item.finish{
+    background-image:url(/static/img/verified.png);
+    p{
+      color:#333;
+    }
+    strong{
+      display: none;
+    }
+  }
+  .item.active{
+    border:1px solid #a8aae4;
+
+    p{
+      color:#3d3dcb;
+      strong:before,strong:after{
+        display: block;
+      }
+    }
+    
+    i{
+      border:1px solid #a8aae4
+    }
+  }
+  //三种状态样式
+  .containue,.uncommit{
+    border:1px solid #a8aae4;
+
+    p{
+      color:#3d3dcb;
+    }
+
+    p strong:before{
+      @include trangle;
+      border-left:8px solid #3d3dcb;
+      right:-0.9rem;
+      top: 0.6rem;
+    }
+    p strong:after{
+      @include trangle;
+      border-left:8px solid #fff;
+      right:-0.8rem;
+      top: 0.6rem;
+    }
+    strong{
+      display: block;
+      color: #3d3dcb;
+    }
+    img{
+      display: none;
+    }
+    i{
+      border:1px solid #a8aae4
+    }
+  }
+  .verified,.commit{
+    p{
+      color:#333;
+    }
+    strong{
+      display: none;
+    }
+    img{
+      display: block;
+    }
+  }
+  .noVerify,.cannot_commit{
+    strong{
+      display: block;
+      color:#aaa;
+    }
+    img{
+      display: none;
+    }
+  }
+  .item:last-child{
+    margin-bottom:0;
+  }
+}

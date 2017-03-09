@@ -1,0 +1,142 @@
+@import "../base";
+.pay{
+	padding-top:2.5rem;
+	.content{
+		color:#999;
+		font-size: .9rem;
+		.wrap{
+			padding-bottom:2rem;
+		}
+		.amount{
+			padding: 2rem 0;
+			border-bottom:1px solid $borderColor;
+			background:#fff;
+			h3{
+				font-size: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				color: $blue;
+			}
+			p{
+				text-align: center;
+			}
+		}
+		.detail{
+			padding:1rem 0 .5rem 1rem;;
+			background:#fff;
+		}
+		.split{
+			height: 2rem;
+			background:url(/static/img/split_line.png) no-repeat top;
+			background-size:contain;
+		}
+		.group{
+			border-bottom:1px solid $borderColor;
+			border-top:1px solid $borderColor;
+			background:#fff;
+			.more{
+				text-align: center;
+				line-height: 1.5rem;
+				font-size: 1rem;
+				border-top:1px solid $borderColor;
+				padding:1rem 0;
+				.iconfont{
+					margin-left: .5rem;
+					font-size: 1.2rem;
+                    color: #999;
+				}
+			}
+		}
+	}
+	
+	.btn{
+		margin:0 1rem;
+	}
+}
+
+.radio_list{
+	li{
+		position: relative;
+		border-bottom:1px solid $borderColor;
+		margin-left:1rem;
+		color: #999;
+		margin-bottom: -1px;
+	}
+	
+	img{
+        width:1.5rem;
+        height:1.5rem;
+        position: absolute;
+    }
+    .title{
+    	width: 90%;
+    	padding:1rem 0 1rem 10%;
+    	// background-repeat:no-repeat;
+    	// background-position:left center;
+    	// background-size:auto 35%;
+    	line-height: 1.5rem;
+        img{
+            position: absolute;
+            width: 1.6rem;
+            height: 1.6rem;
+            left: .3rem;
+            top: 50%;
+            margin-top: -.8rem;
+        }
+    	label{
+    		font-size: 1rem;
+    		display: block;
+    		color:#555;
+    	}
+    	span{
+    		font-size: .8rem;
+    	}
+    }
+    .box{
+    	background:transparent;
+    	border:1px solid $borderColor;
+        background-repeat:no-repeat;
+        background-size:contain;
+    	width: 1rem;
+    	height: 1rem;
+    	border-radius:.7rem;
+    	position: absolute;
+    	right: 1rem;
+    	top: 50%;
+    	margin-top: -.75rem;
+        overflow: hidden;
+    }
+    li.checked{
+    	.box{
+    		background-image:url(/static/img/ic_success.png);
+    	}
+    }
+    li.disabled{
+    	display: none;
+    	.title{
+    		opacity: 0.5;
+    		line-height: 3rem;;
+    	}
+    	.box{
+    		display: none;
+    	}
+    }
+    .add{
+    	// display: none;
+    	.title{
+    		padding:1.3rem 0;
+    		width: 100%;
+    	}
+    	.box{
+    		display: none;
+    	}
+    	.iconfont{
+    		position: absolute;
+    		right: 1rem;
+    		top:0;
+    		top: 50%;
+            color: #999;
+    		margin-top: -.75rem;
+    	}
+    }
+}

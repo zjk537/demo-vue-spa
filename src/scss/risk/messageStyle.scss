@@ -1,0 +1,351 @@
+/*created by w at 20161223*/
+@import "../base";
+@import '../rem';
+.identifyMes{
+  input,button{border:none;}
+	background:#f0f3f5;padding-bottom: 2.4rem;
+}
+// input::placeholder{color:#999 !important;}
+// identify relationMes bankCardMes common style
+$border:1px #e2e6e9 solid;
+@mixin button{
+  display: block;
+  width: 92%;
+  @include Rem(height,84);
+  @include Rem(line-height,84);
+  margin: 0 auto;
+  margin-top: 2.4rem;
+  background: #ccc;/* 
+  background: #ffa11b; */
+  font-size: 1.1rem;
+  color: #fff;
+}
+@mixin mesSpanFontColor{
+  color:#999;
+  @include Rem(font-size,28);
+  white-space: nowrap;
+}
+@mixin mesInputFontColor{
+  color:#dbdbdb;
+  @include Rem(font-size,26);
+  input-placeholder :#999;
+}
+@mixin mesStrongFontColor{
+  color:#3d3dcb;
+  @include Rem(font-size,26);
+  font-weight: normal;
+}
+@mixin trangle{
+  position:absolute;
+  display: block;
+  content: "";
+  width:0;
+  height:0;
+  border:none;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+}
+@mixin importP{
+  position:relative;
+  display: flex;
+  display:  -webkit-flex;
+  @include Rem(height,90);
+  @include Rem(line-height,90);
+  border-bottom:$border;
+}
+@mixin importSpan{
+  display: block;
+  width:26%;
+  @include mesSpanFontColor;
+}
+@mixin importStrong{
+  display: inline-block;
+  position: absolute;
+  right: 8%;
+  @include mesStrongFontColor;
+}
+@mixin importButton{
+  position: absolute;
+  padding-left: 0.8rem;
+  font-size: 0.86667rem;
+  color: #3d3dcb;
+  border-left: 1px #e2e6e9 solid;
+  white-space: nowrap;
+  right: 0.9rem;
+}
+.errorTip{
+  padding:0.4rem 0;
+  @include Rem(font-size,22);
+  background:#feedee;
+  color:#f75258;
+  padding-left: 4%;
+  b{
+    display: inline-block;
+    vertical-align:middle;
+    font-weight: normal;
+    position:relative;
+    // top:-1px;
+  }
+  i{
+    position:relative;
+    display: inline-block;
+    width:.8rem;height:.8rem;
+    background:url(/static/img/error.png) no-repeat;
+    background-size:100%;
+    vertical-align:middle;
+    top:-1px;
+    margin-right:5px;
+  }
+}
+.message{
+  margin-top: 0.8rem;
+  background:#fff;
+  border-bottom:$border;
+  p{
+    @include importP;
+    padding-left:4%;
+  }
+  p:last-child{
+    border-bottom:none;
+  }
+  span{
+    @include importSpan;
+  }
+  a{
+    color:#555;
+    @include Rem(font-size,28);
+  }
+  input{
+    display:block;
+    margin-right: 1.1rem;
+    -webkit-flex: 3;
+    @include mesInputFontColor;
+    color:#555;    
+  }
+  img{
+    width: 2.3rem;
+    display: inline-block;
+    height: 1.86667rem;
+    margin-right: 2%;
+    margin-top: .45rem;
+    border: 1px solid #b1b1ea;
+    vertical-align: middle;
+  }
+  label{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60%;
+    @include mesInputFontColor;
+    color: #555;
+  }
+  strong{
+    @include importStrong;
+  }
+  
+  strong:before{
+    @include trangle;
+    border-left:8px solid #c8c8c8;
+    right:-0.9rem;
+    top: 1rem;
+  }
+  strong:after{
+    @include trangle;
+    border-left:8px solid #fff;
+    right:-0.8rem;
+    top: 1rem;
+  }
+  button{
+  }
+}
+.noMarginTop{margin-top:0;}
+.tip{
+  @include Rem(height,62);
+  @include Rem(line-height,62);
+  padding-left:4%;
+  color:#999;
+  font-weight: normal;
+  @include Rem(font-size,22);
+  white-space: nowrap;
+}
+.getSmsCode,.getPicCode{
+  padding: 1rem 0;
+  height: inherit !important;
+  line-height: inherit !important;
+}
+#submitMes{
+  @include button;
+}
+.ic_notice{
+  position:absolute;
+  display: inline-block;
+  width:1.1rem;
+  height: 1.1rem;
+  background:url(/static/img/ic_notice.png) no-repeat;
+  background-size:100%;
+  right:4%;
+  top:0.9rem;
+}
+//bankCardMes
+.bankCard{
+  padding-left:4%;
+  @include Rem(padding-bottom,25);
+  background:url(/static/img/bankCardMesBg.png) #fff no-repeat;
+  background-size:100%;
+  background-position-y: 100%;
+  p{
+    position:relative;
+    display: flex;
+    display: -webkit-flex;
+    @include Rem(padding-top,25);
+  }
+  span{
+   @include importSpan;
+    @include Rem(font-size,26);
+  }
+  strong{
+    display:block;
+    flex: 3;
+    -webkit-flex: 3;
+    @include mesInputFontColor;
+    color:#333;
+    font-weight: normal;
+    @include Rem(font-size,26);
+  }
+} 
+//mobileVerify
+.verifyMes{
+  background:#fff;
+  border-bottom:$border;
+  p{
+    @include importP;
+    padding-left:4%;
+  }
+  span{
+    @include importSpan;
+  }
+  button{
+    @include importButton;
+  }
+  a{
+    position: absolute;
+    width:5.1rem;
+    height: 1.4rem;
+    white-space: nowrap;
+    right: 0.9rem;
+  }
+  img{
+    width: 100%;
+    height:100%;
+  }
+}
+.mobileMes{
+  padding:1.4rem 0 1.3rem 0;
+  margin-top:0.8rem;
+  border-bottom:$border;
+  background:#fff;
+  text-align: center;
+}
+.mobileMes div:last-child{
+  @include Rem(font-size,34);
+  color:#555;
+}
+.mobileMes div:first-child{
+  padding-bottom:0.4rem;
+  @include Rem(font-size,26);
+  color:#999;
+}
+.forget{
+  padding-top:0.6rem;
+  text-align: right;
+}
+.forgetPassword{
+  padding-right:4%;
+  @include mesStrongFontColor;
+}
+//getZhimaAuthUrl
+.getZhimaAuthUrl{
+  button{
+    border: none;
+  }
+  #submitMes{
+    text-align: center;
+  }
+}
+.noZhimaAuth{
+  display: block;
+  padding:1rem 0;
+  @include mesStrongFontColor;
+  width:100%;
+  text-align: center;
+  background:none;
+}
+//networkAnomaly
+.networkAnomaly{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  background: #f0f3f5;
+  z-index: 999;
+  text-align: center;
+  overflow: hidden;
+  .networkAnomalyTitle{
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #fff;
+    font-size: 1.3rem;
+    background-color: rgb(58,58,58);
+  }
+  .reload{
+    padding:6px 20px;
+    color:#ffa11b;
+    @include Rem(font-size,30);
+    border:1px solid #ffa11b;
+  }
+}
+//reset picker
+.mask{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  top:0;
+  left:0;
+  z-index: 999;
+}
+.mt-picker{
+  position:fixed;
+  width:100%;
+  bottom:0;
+  left:0;
+  background:#eee;
+}
+.picker-toolbar{
+  display:flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  height:inherit;
+  background:#fff;
+  span{
+    display: block;
+    padding:0.8rem;
+    color:#3d3dcb;
+    @include Rem(font-size,34);
+  }
+}
+/* .errorTip{
+  display: none;
+} */
+.canSubmit{
+  background:#ffa11b !important;
+}
+.relationMes{
+  background:#f0f3f5;
+  padding-bottom:2rem;
+  input,button{border:none;}
+}
+.mobileVerify .submit button{width:92% !important;}

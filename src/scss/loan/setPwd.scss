@@ -1,0 +1,74 @@
+@import "../base";
+.set_pwd{
+	padding-top:2.5rem;
+	color:#999;
+	font-size:.8rem;
+	.content{
+		padding:1rem;
+		position: relative;
+		.row{
+			padding:.5rem 0;
+			label{
+				display: block;
+				line-height: 1.5rem;
+				padding:.5rem 0;
+			}
+			input{
+				position: absolute;
+				width: 200%;
+				border:none;
+				height: 1rem;
+				background: transparent;
+				font-size: 1.5px;
+				padding: 1rem 0;
+				margin-left: -4rem;
+				display: inline-block;
+				color: transparent;
+			}
+			.pwdbox{
+				background:url(/static/img/bg_pwd.png) no-repeat center;
+				background-size:100% 100%;
+				height: 3rem;
+				position: relative;
+				overflow: hidden;
+				border-radius:1px;
+				span{
+					width: 16.6%;
+				    margin: 1rem 0;
+				    height: 1rem;
+				    display: inline-block;
+				    text-align: center;
+				    .dot{
+				    	width: 1rem;
+				    	height: 1rem;
+				    	display: inline-block;
+					    background: #000;
+					    border-radius: .5rem;
+					}
+				}
+
+				input::selection {
+					background:transparent; 
+					color:transparent;
+				}
+				input::-moz-selection {
+					background:transparent; 
+					color:transparent;
+				}
+				input::-webkit-selection {
+					background:transparent; 
+					color:transparent;
+				}
+			}
+			.pwdbox.enabled{
+				box-shadow:0 0 2px 2px rgba(61,61,203,.5);
+
+			}
+		}
+
+		.btn{
+			margin-top: 2rem;
+		}
+	}
+
+}

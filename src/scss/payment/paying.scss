@@ -1,0 +1,75 @@
+@import "../base";
+.paying{
+	padding-top:2.5rem;
+	.content{
+		color: #999;
+		font-size: .9rem;
+		.group{
+			background:#fff;
+			border-bottom:1px solid $borderColor;
+			padding:1rem;
+		}		
+		.status{
+			line-height: 1.5rem;
+			position:relative;
+			padding:.5rem 0;
+			span{
+				position:absolute;
+				display: inline-block;
+				right: 0;
+				color:#ffa11b;
+			}
+		}
+		.amount{
+			color: #3d3dcb;
+			padding:.5rem 0;
+			h3{
+				font-size: 3rem;
+				line-height: 2.5rem;
+			}
+			h3:before{
+				content: "￥";
+				font-size: 1.5rem;
+			}
+			.date{
+				line-height:2rem;
+			}
+		}
+
+		.info{
+			width: 100%;
+			border-top:1px solid $borderColor;
+			margin-top: 1.5rem;
+			padding: 1.5rem 0 .5rem;;
+			position:relative;
+			h4{
+				position:absolute;
+				background:#fff;
+				top:-.7rem;
+				padding-right:.5rem;
+				font-weight: normal;
+			}
+
+			li{
+				line-height: 1.5rem;
+				padding:.2rem 0;
+				label{
+					display: inline-block;
+					min-width: 5rem;
+				}
+				.coin:before{
+					content: "￥";
+				}
+			}
+			// li:nth-child(even){
+			// 	width:50%;
+			// 	float: right;
+			// 	margin-top: -1.9rem;
+			// }
+		}
+	}
+	.btn{
+		display: block;
+		margin:2rem 1rem;
+	}
+}

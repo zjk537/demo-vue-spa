@@ -1,2 +1,9 @@
-# vue-spa
-vue + webpack + vuex 实现单页面应用
+## 运行
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+```

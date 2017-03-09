@@ -1,0 +1,90 @@
+/*created by w at 20161223*/
+@import "../base";
+@import '../rem';
+$border:1px #e2e6e9 solid;
+.identifyPic{
+  input,button{border:none;}
+  padding:2.4rem 0;
+  background: #f0f3f5;
+}
+@mixin tipFont{
+  color:#999;
+  @include Rem(font-size,22);
+  @include Rem(height,60);
+  @include Rem(line-height,60);
+}
+.picBox{
+  padding:0 0.8rem;
+  padding-bottom:0.8rem;
+  margin-bottom: 0.8rem;
+  background:#fff;
+  border-bottom:1px solid $borderColor;
+  h5{
+    @include tipFont;
+  }
+  div{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position:relative;
+    font-size: 0;
+  }
+  span:last-child{
+   margin-left: 0.3rem;
+  }
+  span:first-child{
+   margin-right: 0.3rem;
+  }
+  span{
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    flex:1;
+    border-radius:3px;
+    border:1px dashed #d5d5d5;
+    @include Rem(width,334);
+    @include Rem(height,216);
+  }
+  span.stand{
+    border:1px solid #b1b1ea;
+  }
+  input{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    border-radius:3px;
+    border:1px solid #b1b1ea;
+    box-sizing: content-box;
+    opacity: 0;
+    z-index: 2;
+    top:0;
+    left:0;
+  }
+  img{
+    width:100%;
+    height: 100%;
+  }
+  p{
+    @include Rem(height,60);
+    @include Rem(line-height,60);
+    margin-top: 0.8rem;
+    color:#ffa11b;
+    @include Rem(font-size,22);
+    background:#fffadc;
+    text-align: center;
+  }
+}
+.canvasImgContainer{
+  border:2px solid orange;
+  position:absolute;
+  display: none;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+canvas{
+  width:100%;
+  height:100%;
+}
