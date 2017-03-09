@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>简单借款</title>
+	<title>spa 测试站点</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -34,15 +34,15 @@
     		window.tokenId = guid(); 
     	}
         _fmOpt = {
-            partner: 'crjsd',
-            appName: 'crjsd_h5',
+            partner: 'partner',
+            appName: 'partner_h5',
             token: window.tokenId
         };
         var cimg = new Image(1,1);
         cimg.onload = function() {
             _fmOpt.imgLoaded = true;
         };
-        cimg.src = "https://fp.fraudmetrix.cn/fp/clear.png?partnerCode=crjsd&appName=crjsd_h5&tokenId=" + _fmOpt.token;
+        cimg.src = "https://fp.fraudmetrix.cn/fp/clear.png?partnerCode=partner&appName=partner_h5&tokenId=" + _fmOpt.token;
         var fm = document.createElement('script'); fm.type = 'text/javascript'; fm.async = true;
         fm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.fraudmetrix.cn/fm.js?ver=0.1&t=' + (new Date().getTime()/3600000).toFixed(0);
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fm, s);
@@ -53,7 +53,7 @@
 	_hmt.push(['_setAutoPageview', false]);
 	(function() {
 	  var hm = document.createElement("script");
-	  hm.src = "https://hm.baidu.com/hm.js?6ea4832b203c97af48cb02db7b526abd";
+	  hm.src = "https://hm.baidu.com/hm.js?百度统计代码code";
 	  var s = document.getElementsByTagName("script")[0]; 
 	  s.parentNode.insertBefore(hm, s);
 	})();

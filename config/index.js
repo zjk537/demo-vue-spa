@@ -24,21 +24,21 @@ module.exports = {
     proxyTable: {
 
         // '/apis/risk': {
-        //     target: 'https://test-m.jiandanjiekuan.com',//'http://172.16.10.175:8090', //,
+        //     target: 'https://test-m.spa.com',//'http://172.16.10.175:8090', //,
         //     changeOrigin:true,
         //     pathRewrite:{
         //         '^/apis':'/apis/risk'
         //     }
         // }, 
         '/apis/h5': {
-            target: 'https://test-passport.jiandanjiekuan.com',
+            target: 'https://test-passport.spa.com',
             changeOrigin:true,// 本地虚拟一个服务器代发你的请求
             pathRewrite:{
                 '^/apis/h5':'/apis/h5'
             }
         },
         '/apis': {
-            target: 'https://test-m.jiandanjiekuan.com',
+            target: 'https://test-m.spa.com',
             changeOrigin:true,// 本地虚拟一个服务器代发你的请求
             pathRewrite:{
                 '^/apis':'/apis'

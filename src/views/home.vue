@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<comHeader title="简单借款" menu="我的" @onMenuClick="toMe"></comHeader>
+		<comHeader title="测试站点" menu="我的" @onMenuClick="toMe"></comHeader>
 		<div class="content">
             <div class="circle">
                 <svg width="260" height="260" viewbox="0 0 260 260">
